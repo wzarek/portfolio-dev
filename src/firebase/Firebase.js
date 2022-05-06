@@ -4,12 +4,12 @@ import { getStorage } from 'firebase/storage'
 import { initializeAppCheck, ReCaptchaV3Provider } from 'firebase/app-check';
 
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_FIREBASE_APP_ID
+  apiKey: "AIzaSyD8mbFqEeYX7_XWSVslnr2A3O3FGcJdcSM",
+  authDomain: "portfolio-web-dev-bed65.firebaseapp.com",
+  projectId: "portfolio-web-dev-bed65",
+  storageBucket: "portfolio-web-dev-bed65.appspot.com",
+  messagingSenderId: "162329209572",
+  appId: "1:162329209572:web:7b7e79ac0bcf83ad939af1"
 };
 
 const app = initializeApp(firebaseConfig);
