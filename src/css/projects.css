@@ -1,0 +1,173 @@
+/* PROJECT PAGE */
+
+section.project-main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    padding-top: 10vh;
+    position: relative;
+  }
+  
+  section.project-main > a {
+    position: absolute;
+    top: 2em;
+    left: 2em;
+    color: white;
+  }
+
+  section.project-main > a:hover {
+    color: var(--accent-color);
+  }
+  
+  section.project-main .project-about {
+    width: 90%;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "h2 h2"
+    "desc tech"
+    "status tech"
+    "links tech";
+    gap: 2vh;
+    justify-items: center;
+  }
+
+  section.project-main .project-about h2 {
+    grid-area: h2;
+    justify-self: flex-start;
+  }
+
+  section.project-main .project-about p {
+    margin: 0;
+  }
+
+  section.project-main .project-desc {
+    grid-area: desc;
+    justify-self: flex-start;
+  }
+  
+  section.project-main .project-status {
+    grid-area: status;
+  }
+
+  section.project-main .project-status-done {
+    color: limegreen;
+  }
+
+  section.project-main .project-status-inprogress {
+    color: darkred;
+  }
+
+  section.project-main .project-links {
+    display: flex;
+    gap: .5vmax;
+    grid-area: links;
+  }
+  
+  section.project-main .project-links a:hover svg{
+    fill: var(--accent-color);
+  }
+
+  section.project-main .project-technologies {
+    grid-area: tech;
+  }
+  
+  section.project-main .project-images {
+    margin-top: 5vh;
+    padding-top: 1vh;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-top: 2px solid var(--accent-color);
+    gap: 1em;
+    margin-inline: auto;
+  }
+  
+  section.project-main .project-images img {
+    width: calc(50% - .5em);
+  }
+
+  section.project-main .project-scroll,
+  section.project-main #project-bottom {
+      background-color: var(--secondary-color);
+      border-radius: 100%;
+      position: fixed;
+      bottom: 1em;
+      right: calc(50% - (1.5vmax / 2) - .5em);
+      animation: bounceArrow 4s infinite linear;
+  }
+
+  section.project-main #project-bottom {
+    position: absolute;
+    visibility: hidden;
+    animation: bounceArrowUp 4s infinite linear;
+  }
+
+  @keyframes bounceArrowUp {
+    0%, 60% {
+      transform: translateY(0);
+    }
+    70% {
+      transform: translateY(30%);
+    }
+    75% {
+      transform: translateY(-10%);
+    }
+    80% {
+      transform: translateY(25%);
+    }
+    85% {
+      transform: translateY(-12%);
+    }
+    95%, 100% {
+      transform: translateY(0);
+    }
+  }
+
+  section.project-main .project-scroll a,
+  section.project-main #project-bottom a {
+    margin: 0;
+    padding: .5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+
+  section.project-main .project-scroll a:hover svg,
+  section.project-main #project-bottom a:hover svg {
+    color: var(--accent-color);
+  }
+
+  @media only screen and (max-width: 1400px) {
+    section.project-main .project-links {
+      gap: 1.5vmax;
+    }
+
+    section.project-main .project-links a svg{
+      width: 2vmax;
+      height: 2vmax;
+    }
+  }
+
+  @media only screen and (max-width: 1000px) {
+    section.project-main {
+      font-size: 90%;
+    }
+
+    section.project-main .project-links a svg{
+      width: 2.5vmax;
+      height: 2.5vmax;
+    }
+
+    /* section.project-main .project-scroll,
+    section.project-main #project-bottom {
+      display: none;
+    } */
+
+    section.project-main .project-images img {
+      width: 100%;
+    }
+  }

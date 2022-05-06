@@ -1,0 +1,685 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;500&display=swap');
+
+:root {
+  --primary-color: black;
+  --secondary-color: #262526;
+  --accent-color: #8934eb;
+  --text-color: white;
+  --default-font: 'Roboto Mono', monospace;
+  --secondary-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.grecaptcha-badge { 
+  visibility: hidden; 
+}
+
+body {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  overflow: hidden;
+  touch-action: none;
+  -ms-touch-action: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+body * {
+  font-family: var(--default-font);
+}
+
+div#root {
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent-color);
+}
+
+.div-home {
+  overflow: hidden;
+}
+
+/*  -- HEADER --  */
+
+header nav {
+  position: fixed;
+  left: 5vw; 
+  width: 5vw;
+}
+
+header nav ul {
+  height: 25vmax;
+  margin-top: calc(50vh - (25vmax / 2));
+  padding: 5vh 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--secondary-color);
+  border-radius: 5vmax;
+}
+
+header nav ul li {
+  list-style: none;
+  position: relative;
+}
+
+header nav ul li a {
+  display: flex;
+  align-items: center;
+  padding: 1.25vmax;
+  border-radius: 100%;
+}
+
+header nav ul li a.nav-active {
+  background-color: var(--primary-color);
+}
+
+header nav ul li a::after {
+  content: attr(data-label);
+  color: var(--accent-color);
+  font-size: .8vmax;
+  font-weight: 400;
+  text-align: center;
+  width: 5vw;
+  margin: auto;
+  position: absolute;
+  bottom: -0.3vmax;
+  left: calc(-2.5vw + 1.9vmax);
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out, transform 0.3s ease-in-out;
+  transform: translateY(-50%);
+}
+
+header nav ul li a:not(.nav-active):hover::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/*  -- MAIN --  */
+
+main {
+  width: 70%;
+  margin-inline: auto;
+  padding-left: 5vw;;
+}
+
+/* home */
+
+section#home {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 25vh;
+}
+
+section#home h1 {
+  font-size: 4rem;
+  margin-top: 15vh;
+  font-family: var(--secondary-font);
+}
+
+section#home p {
+  letter-spacing: .25em;
+}
+
+section#home figure {
+  height: 50%;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+section#home figure img {
+  min-width: 100%;
+  width: 100%;
+}
+
+section#home figure div {
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5vmax;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .5s ease-in-out, visibility .5s ease-in-out;
+}
+
+section#home figure:hover div {
+  visibility: inherit;
+  opacity: 1;
+}
+
+section#home figure div a:hover svg {
+  fill: var(--accent-color);
+}
+
+section#home .home-icons {
+  position: absolute;
+  right: 50%;
+  top: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 30%;
+}
+
+section#home .home-icons div:nth-of-type(1) svg {
+  animation: bounceDot 4s infinite ease-in;
+}
+
+section#home .home-icons div:nth-of-type(2) svg {
+  animation: bounceDot 4s 1s infinite ease-in;
+}
+
+section#home .home-icons div:last-of-type svg {
+  animation: bounceArrow 4s infinite linear;
+}
+
+@keyframes bounceArrow {
+  0%, 60% {
+    transform: translateY(0);
+  }
+  70% {
+    transform: translateY(-20%);
+  }
+  75% {
+    transform: translateY(30%);
+  }
+  80% {
+    transform: translateY(-15%);
+  }
+  85% {
+    transform: translateY(22%);
+  }
+  95%, 100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceDot {
+  0% {
+    transform: scaleY(1);
+  }
+  20% {
+    transform: scaleY(2);
+  }
+  40%, 100% {
+    transform: scaleY(1);
+  }
+}
+
+/* about */
+
+section#about {
+  padding-top: 10vh;
+  height: 100vh;
+}
+
+section#about > div {
+  margin-top: 5vh;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+section#about > div > p {
+  flex-basis: 100%;
+  margin-bottom: 3em;
+  /* text-align: center; */
+  font-size: 1.1rem;
+}
+
+section#about .about-card-container {
+  width: 15vw;
+  padding: 2em;
+  border: 1px solid var(--text-color);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  position: relative;
+}
+
+section#about .about-card-container p:first-of-type {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -3em;
+  width: 10em;
+  height: 3em;
+  text-align: center;
+  right: calc(50% - 5em);
+  background-color: var(--primary-color);
+  color: limegreen; 
+  /* rgb(152, 26, 26) */
+}
+
+section#about .about-card-container p:nth-of-type(2) {
+  margin: 0;
+  font-weight: 300;
+}
+
+/* portfolio */
+
+section#portfolio {
+  padding-top: 10vh;
+  height: 100vh;
+}
+
+section#portfolio .portfolio-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  position: relative;
+  overflow: hidden;
+  gap: 1vmax;
+}
+
+section#portfolio .portfolio-container .portfolio-project {
+  height: 25vh; 
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+section#portfolio .portfolio-container .portfolio-project img {
+  height: 100%;
+  opacity: 0.85;
+  z-index: 1;
+  transition: transform .5s ease-in-out;
+}
+
+section#portfolio .portfolio-container .portfolio-project:hover img {
+  transform: scale(1.1);
+}
+
+section#portfolio .portfolio-container .portfolio-project h3 {
+  font-weight: 100;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: var(--primary-color);
+  width: 100%;
+  margin: 0;
+  padding: 2.5vh 1vw;
+  z-index: 2;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+section#portfolio .portfolio-container .portfolio-project a {
+  position: absolute;
+  padding: 1vh 1vw;
+  bottom: 1.25vh;
+  right: 0;
+  z-index: 2;
+}
+
+section#portfolio .portfolio-container .portfolio-project a.animated {
+  animation: bounceArrowRight 1s ease-in-out;
+}
+
+@keyframes bounceArrowRight {
+  0%{
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-10%);
+  }
+  40% {
+    transform: translateX(15%);
+  }
+  60% {
+    transform: translateX(-10%);
+  }
+  80% {
+    transform: translateX(15%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* contact */
+
+section#contact {
+  height: 100vh;
+  padding-top: 10vh;
+}
+
+section#contact a:hover {
+  color: var(--text-color);
+}
+
+section#contact > div {
+  display: flex;
+  justify-content: space-between;
+  width: 10%;
+  flex-wrap: wrap;
+}
+
+section#contact > div svg:hover {
+  fill: var(--accent-color);
+}
+
+section#contact .contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  width: 50%;
+  margin-inline: auto;
+  margin-top: 10vh;
+  padding: 2em;
+  border: 1px solid var(--text-color);
+  position: relative;
+}
+
+section#contact .contact-form p {
+  position: absolute;
+  width: 10em;
+  text-align: center;
+  top: -2em;
+  background-color: var(--primary-color);
+}
+
+section#contact .contact-form input,
+section#contact .contact-form textarea,
+section#contact .contact-form select,
+section#contact .contact-form button {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  border: none;
+  resize: none;
+  padding: .5em;
+}
+
+section#contact .contact-form input:focus,
+section#contact .contact-form textarea:focus,
+section#contact .contact-form select:focus,
+section#contact .contact-form button:focus {
+  outline: 1px solid var(--accent-color);
+}
+
+section#contact .contact-form textarea {
+  height: 15vh;
+}
+
+section#contact .contact-form button {
+  background-color: var(--accent-color);
+}
+
+section#contact .contact-form button:hover {
+  cursor: pointer;
+  color: var(--secondary-color);
+}
+
+section#contact .contact-form select:hover {
+  cursor: pointer;
+}
+
+section#contact .contact-submit {
+  width: 10em;
+  background-color: var(--primary-color);
+  position: absolute;
+  bottom: -1em;
+  right: calc(50% - 5em);
+  display: flex;
+  justify-content: center;
+}
+
+/*  -- FOOTER --  */
+
+footer {
+  position: absolute;
+  bottom: 1vh;
+  display: flex;
+  justify-content: center;
+  height: 5vh;
+  width: 100vw;
+}
+
+footer a:hover {
+  color: var(--text-color);
+}
+
+/* ---- RESPONSIVE ---- */
+
+@media only screen and (max-width: 1440px) {
+
+  /* -- NAV -- */
+
+  header nav ul li a svg {
+    width: 1.7vmax;
+    height: 1.7vmax;
+  }
+
+  /* -- MAIN -- */
+
+  /* home */
+
+  section#home > figure {
+    display: none;
+  }
+
+  section#home > div:first-of-type {
+    text-align: center;
+    flex-basis: 100%;
+  }
+
+  /* about */
+
+  section#about > div {
+    margin-top: 3vh;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+
+  /* -- NAV -- */
+
+  header nav {
+    bottom: 5vh;
+    left: calc(50vw - (30vw / 2));
+    height: 8vh;
+    width: 30vw;
+    z-index: 5;
+  }
+
+  header nav ul {
+    flex-direction: row;
+    margin-top: 0;
+    padding: .05vh 2.5vw;
+    height: 100%;
+  }
+
+  /* MAIN */
+
+  section#about,
+  section#portfolio,
+  section#contact {
+    font-size: 90%;
+    padding-top: 1vh;
+  }
+
+  main {
+    padding: 0;
+  }
+
+  /* home */
+
+  section#home {
+    pointer-events: none;
+    padding-top: 20vh;
+  }
+
+  section#home .home-icons {
+    display: none;
+  }
+
+  /* about */
+
+  section#about .about-card-container svg {
+    height: 1.75vmax;
+    width: 1.75vmax;
+  }
+
+  /* portfolio */
+
+  section#portfolio .portfolio-container {
+    grid-template-columns: 1fr 1fr;
+  }  
+
+  section#portfolio .portfolio-container .portfolio-project {
+    height: 20vh;
+  }
+
+  section#portfolio .portfolio-container .portfolio-project img {
+    width: 100%;
+  }
+
+  section#portfolio .portfolio-container .portfolio-project a svg {
+    width: 1.5vmax;
+    height: 1.5vmax;
+  }
+
+  /* contact */
+
+  section#contact > div {
+    width: 12vmax;
+  }
+
+  section#contact > div a svg {
+    width: 3vmax;
+    height: 3vmax;
+  }
+
+  section#contact .contact-form {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+
+  /* -- NAV -- */
+
+  header nav {
+    bottom: 5vh;
+    left: calc(50vw - (18em / 2));
+    height: 8vh;
+    width: 18em;
+    z-index: 5;
+  }
+
+  header nav ul {
+    flex-direction: row;
+    margin-top: 0;
+    padding: .1vh 2.5vw;
+    height: 100%;
+  }
+
+  header nav ul li a svg {
+    width: 1.25em;
+    height: 1.25em;
+  }
+
+  /* MAIN */
+
+  section#about,
+  section#portfolio,
+  section#contact {
+    font-size: 70%;
+  }
+
+  main {
+    width: 95%;
+  }
+
+  /* about */
+
+  section#about > div > p {
+    margin-bottom: .25em;
+    font-size: 120%;
+  }
+
+  section#about > div {
+    gap: 3em 0;
+  }
+
+  section#about .about-card-container {
+    width: 30vw;
+    padding: 1.5em;
+  }
+
+  section#about .about-card-container svg {
+    height: 2.5vmax;
+    width: 2.5vmax;
+  }
+
+  /* -- FOOTER -- */ 
+
+  footer {
+    font-size: 70%;
+    bottom: .5em;
+  }
+}
+
+@media only screen and (max-width: 525px) {
+  /* MAIN */
+
+  /* home */
+
+  section#home {
+    padding-top: 15vh;
+  }
+
+  /* about */
+
+  section#about > div > p {
+    margin-bottom: .1em;
+    font-size: 110%;
+  }
+
+  section#about > div {
+    gap: 2em 0;
+    margin-top: 1vh;
+  }
+
+  section#about .about-card-container {
+    width: 38vw;
+    padding: 1em;
+  }
+
+  section#about .about-card-container svg {
+    height: 1.5vmax;
+    width: 1.5vmax;
+  }
+
+  section#about .about-card-container p:nth-of-type(2) {
+    font-size: 80%;
+  }
+
+  /* portfolio */ 
+
+  section#portfolio .portfolio-container .portfolio-project h3 {
+    font-size: 90%;
+  }
+}
