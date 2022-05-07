@@ -450,7 +450,7 @@ section#contact .contact-submit {
 
 footer {
   position: absolute;
-  bottom: 1vh;
+  bottom: 10vh;
   display: flex;
   justify-content: center;
   height: 5vh;
