@@ -63,7 +63,7 @@ function ProjectRoute() {
         animate={{scaleX: 1, transition: {duration: 0.5}}}
         exit={{scaleX: 0, transition: {duration: 0.5}}}
     >
-    <Link to="/#portfolio"><IoClose size={"2.5vmax"}/></Link>
+    <Link to={window.location.href.indexOf('github') === -1 ? "/#portfolio" : "/portfolio#portfolio"}><IoClose size={"2.5vmax"}/></Link>
       {
           project.length === 0 ? <h2 className='project-not-found'>not found</h2> :
           project.map((p) => (

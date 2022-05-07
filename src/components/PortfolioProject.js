@@ -16,12 +16,12 @@ function PortfolioProject(props) {
     }, [props.thumb]);
     return (
     <div className='portfolio-project' 
-        onClick={() => navigate(`/projects/${props?.slug}`)} 
+        onClick={() => {window.location.href.indexOf('github') === -1 ? navigate(`/projects/${props?.slug}`) : navigate(`/portfolio/projects/${props?.slug}`)}} 
         onMouseEnter={() => setAnimated(true)}
         onAnimationEnd={() => setAnimated(false)}
     >
         <h3>{props?.name}</h3>
-        <Link className={animated ? 'animated' : ''} to={`/projects/${props?.slug}`}>
+        <Link className={animated ? 'animated' : ''} to={window.location.href.indexOf('github') === -1 ? `/projects/${props?.slug}` : `/portfolio/projects/${props?.slug}`}>
             <IoChevronForwardSharp size={'1.25vmax'}/>
         </Link>
         <img src={image} alt={props?.name}/>
