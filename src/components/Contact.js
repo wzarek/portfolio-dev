@@ -49,12 +49,12 @@ function Contact() {
                 <IoLogoLinkedin color='white' size={'2vmax'} />
             </a>
         </div>
-        <form className='contact-form' onSubmit={sendMessage}>
+        <form className='contact-form' onSubmit={sendMessage} method='POST'>
             <p>contact form</p>
             <input aria-label='name' placeholder='name' value={name} onChange={(e) => setName(e.target.value)} />
             <input aria-label='email' placeholder='email' value={email} onChange={(e) => setEmail(e.target.value)} />
             <textarea aria-label='message' placeholder='message' value={message} onChange={(e) => setMessage(e.target.value)} />
-            <select aria-label='type' name='type' id='type' onChange={(e) => setType(e.target.value)}>
+            <select value={type} aria-label='type' name='type' id='type' onChange={(e) => setType(e.target.value)}>
                 <option value='job-offer'>job offer</option>
                 <option value='valuation'>webpage valuation</option>
                 <option value='bug-report'>bug on this page</option>
