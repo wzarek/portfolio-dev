@@ -63,7 +63,7 @@ function Contact() {
             <div className='contact-submit'>
                 <button className="g-recaptcha" 
                     data-sitekey="6LdmE8kfAAAAAGg4_ieOJIRyLy_Fm44vfWqRdtw3" 
-                    data-callback='onSubmit' 
+                    data-callback='sendMessage' 
                     data-action='submit'>
                         send message
                 </button>
