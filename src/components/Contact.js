@@ -49,7 +49,7 @@ function Contact() {
                 <IoLogoLinkedin color='white' size={'2vmax'} />
             </a>
         </div>
-        <form className='contact-form' onSubmit={sendMessage} method='POST'>
+        <form className='contact-form' onSubmit={sendMessage}>
             <p>contact form</p>
             <input aria-label='name' placeholder='name' value={name} onChange={(e) => setName(e.target.value)} />
             <input aria-label='email' placeholder='email' value={email} onChange={(e) => setEmail(e.target.value)} />
