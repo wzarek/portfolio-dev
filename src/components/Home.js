@@ -32,7 +32,7 @@ function Home() {
                 <a href="https://www.instagram.com/wzarek" target='_blank' rel='noreferrer'>
                     <IoLogoInstagram color='white' size={'3vmax'} />
                 </a>
-                <a href="https://www.github.com/wzarek" target='_blank' rel='noreferrer'>
+                <a href="https://www.linkedin.com/in/wzarek" target='_blank' rel='noreferrer'>
                     <IoLogoLinkedin color='white' size={'3vmax'} />
                 </a>
             </div>
