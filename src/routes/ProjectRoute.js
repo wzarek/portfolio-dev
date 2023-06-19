@@ -53,7 +53,7 @@ function ProjectRoute() {
         }else{
             setLoading(false);
         }
-    }, [images]);
+    }, [images, listRef]);
     
   return (
     <motion.section 
