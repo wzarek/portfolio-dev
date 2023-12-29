@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 
 function Home() {
 
-    const [t, i18n] = useTranslation('common');
+    const [t] = useTranslation('common');
 
     useEffect(() => {
         document.title = t('app.title');

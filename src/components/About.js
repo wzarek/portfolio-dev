@@ -3,7 +3,7 @@ import { IoLogoJavascript, IoLogoCss3, IoLogoPython, IoLogoReact, IoLogoSass, Io
 import { useTranslation } from "react-i18next";
 
 function About() {
-  const [t, i18n] = useTranslation('common');
+  const [t] = useTranslation('common');
 
   return (
     <section id="about">

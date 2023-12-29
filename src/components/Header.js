@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 function Header(props) {
     const [active, setActive] = useState(props.active);
 
-    const [t, i18n] = useTranslation('common');
+    const [t] = useTranslation('common');
 
     useEffect(() => {
         let currentView = window.location.hash.slice(1) || props.active;
