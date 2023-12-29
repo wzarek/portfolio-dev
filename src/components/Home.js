@@ -1,9 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { IoChevronDown, IoEllipse, IoLogoInstagram, IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5';
 import image from '../home-image.jpg';
 import { motion } from 'framer-motion';
+import { useTranslation } from "react-i18next";
 
 function Home() {
+
+    const [t, i18n] = useTranslation('common');
+
+    useEffect(() => {
+        document.title = t('app.title');
+    }, [t]);
+
   return (
     <section id="home">
         <div>

@@ -1,0 +1,61 @@
+{
+	"app": {
+		"footer": {
+			"text": "created by:"
+		},
+		"header": {
+			"about": "about",
+			"contact": "contact",
+			"home": "home",
+			"portfolio": "portfolio"
+		},
+		"sections": {
+			"about": {
+				"description": "I'm Maciek, a fullstack developer based in Poland, Wroclaw.",
+				"offer": {
+					"maintext": "My offer:",
+					"mobile": {
+						"description": "Turning your idea into reality.\nWith React Native/Flutter I can create simple mobile apps.",
+						"title": "mobile app development"
+					},
+					"webdesign": {
+						"description": "Desiging a website according to your requirements. From simple onepage websites to even more complex like ecommerce.",
+						"title": "web design"
+					},
+					"webdevelopment": {
+						"description": "Full coding (and designing) from scratch.\nThis includes onnection with database, authentication, admin page, CMS etc.",
+						"title": "complex web development"
+					}
+				},
+				"technologies": {
+					"maintext": "Technologies I use"
+				}
+			},
+			"contact": {
+				"description": "You can contact me throughout a contact form placed right below or directly on",
+				"form": {
+					"inputs": {
+						"email": "email address",
+						"message": "message",
+						"name": "name",
+						"select": {
+							"bug": "bug on this page",
+							"joboffer": "job offer",
+							"other": "other",
+							"pricing": "individual pricing"
+						},
+						"send": "send message"
+					},
+					"title": "contact form"
+				}
+			}
+		},
+		"title": "wzarek - innovative web solutions"
+	},
+	"language-selector": {
+		"languages": {
+			"en": "EN",
+			"pl": "PL"
+		}
+	}
+}

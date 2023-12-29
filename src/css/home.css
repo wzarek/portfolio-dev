@@ -104,6 +104,24 @@ header nav ul li a:not(.nav-active):hover::after {
   transform: translateX(0);
 }
 
+header nav ul li div.lang-selector-container {
+  display: flex;
+  gap: .5rem;
+}
+
+header nav ul li button.lang-selector {
+  all: unset;
+  color: var(--accent-color);
+  padding: .25rem;
+  border-radius: .5rem;
+  font-size: .8rem;
+  cursor: pointer;
+}
+
+header nav ul li button.lang-selector-selected {
+  background-color: var(--primary-color);
+}
+
 /*  -- MAIN --  */
 
 main {
@@ -509,6 +527,25 @@ footer a:hover {
     margin-top: 0;
     padding: .05vh 2.5vw;
     height: 100%;
+  }
+
+  header nav ul li div.lang-selector-container {
+    display: flex;
+    flex-direction: column;
+    gap: .12rem;
+  }
+  
+  header nav ul li button.lang-selector {
+    all: unset;
+    color: var(--accent-color);
+    padding: .25rem;
+    border-radius: .5rem;
+    font-size: .7rem;
+    cursor: pointer;
+  }
+  
+  header nav ul li button.lang-selector-selected {
+    background-color: var(--primary-color);
   }
 
   /* MAIN */

@@ -1,0 +1,61 @@
+{
+	"app": {
+		"footer": {
+			"text": "stworzone przez:"
+		},
+		"header": {
+			"about": "o mnie",
+			"contact": "kontakt",
+			"home": "home",
+			"portfolio": "portfolio"
+		},
+		"sections": {
+			"about": {
+				"description": "Hej, jestem Maciek - fullstack developer z Wrocławia.",
+				"offer": {
+					"maintext": "Moja oferta:",
+					"mobile": {
+						"description": "Obróćmy twój pomysł w coś rzeczywistego, co Ty na to?",
+						"title": "aplikacje mobilne"
+					},
+					"webdesign": {
+						"description": "Projektowanie stron internetowych według Twoich wymagań. Od prostych stron aż po skomplikowane jak sklepy internetowe.",
+						"title": "projektowanie stron"
+					},
+					"webdevelopment": {
+						"description": "Całościowa obsługa tworzenia stron (projektowanie i programowanie) od zera.\nW tym połączenie z bazą danych, CMS itd.",
+						"title": "tworzenie stron"
+					}
+				},
+				"technologies": {
+					"maintext": "Technologie, których używam:"
+				}
+			},
+			"contact": {
+				"description": "Możesz skorzystać z formularza poniżej albo napisać bezpośrednio na",
+				"form": {
+					"inputs": {
+						"email": "adres email",
+						"message": "wiadomość",
+						"name": "imię",
+						"select": {
+							"bug": "błąd na stronie",
+							"joboffer": "oferta współpracy",
+							"other": "inne",
+							"pricing": "wycena indywidualna"
+						},
+						"send": "wyślij"
+					},
+					"title": "formularz"
+				}
+			}
+		},
+		"title": "wzarek - innowacyjne rozwiązania webowe"
+	},
+	"language-selector": {
+		"languages": {
+			"en": "EN",
+			"pl": "PL"
+		}
+	}
+}

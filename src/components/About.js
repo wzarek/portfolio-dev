@@ -1,18 +1,21 @@
 import React from 'react'
 import { IoLogoJavascript, IoLogoCss3, IoLogoPython, IoLogoReact, IoLogoSass, IoLogoNodejs, IoLogoFirebase, IoLogoHtml5 } from 'react-icons/io5';
+import { useTranslation } from "react-i18next";
 
 function About() {
+  const [t, i18n] = useTranslation('common');
+
   return (
     <section id="about">
         <h2>
-            about
+          {t('app.header.about')}
         </h2>
         <p>
-          I'm Maciek, a fullstack developer based in Poland, Wrocław.
+          {t('app.sections.about.description')}
         </p>
         <div className='about-technologies'>
           <p>
-            Technologies I use:
+            {t('app.sections.about.technologies.maintext')}
           </p>
           <div className='about-technologies-frontend about-card-container'>
             <p>frontend</p>
@@ -35,24 +38,24 @@ function About() {
         </div>
         <div className='about-offer'>
           <p>
-            My offer:
+            {t('app.sections.about.offer.maintext')}
           </p>
           <div className='about-card-container'>
-            <p>web designing</p>
+            <p>{t('app.sections.about.offer.webdesign.title')}</p>
             <p>
-              Desiging a website according to your requirements. <br/> From simple onepage websites to even more complex ecommerce sites.
+              {t('app.sections.about.offer.webdesign.description')}  
             </p>
           </div>
           <div className='about-card-container'>
-            <p>complex web development</p>
+            <p>{t('app.sections.about.offer.webdevelopment.title')}</p>
             <p>
-              Full coding (and designing) from scratch. <br/> This includes onnection with database, authentication, admin page, CMS etc.
+              {t('app.sections.about.offer.webdevelopment.description')}
             </p>
           </div>
           <div className='about-card-container'>
-            <p>mobile app development</p>
+            <p>{t('app.sections.about.offer.mobile.title')}</p>
             <p>
-              Turning your idea into reality. <br/> With React Native/Flutter I can create (for now) simple mobile apps.
+              {t('app.sections.about.offer.mobile.description')}
             </p>
           </div>
         </div>

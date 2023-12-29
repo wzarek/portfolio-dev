@@ -1,9 +1,12 @@
 import React from 'react'
+import { useTranslation } from "react-i18next"
 
 function Footer() {
+  const [t, i18n] = useTranslation('common');
+
   return (
     <footer>
-        <p>created by <span>Maciej Krawczyk</span> &copy; <a href="http://www.wzarek.me">wzarek.me</a></p>
+        <p>{t('app.footer.text')} Maciej Krawczyk &copy; <a href="http://www.wzarek.me">wzarek.me</a></p>
     </footer>
   )
 }
