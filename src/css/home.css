@@ -116,6 +116,7 @@ header nav ul li button.lang-selector {
   border-radius: .5rem;
   font-size: .8rem;
   cursor: pointer;
+  font-family: inherit;
 }
 
 header nav ul li button.lang-selector-selected {
