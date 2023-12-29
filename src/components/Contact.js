@@ -10,7 +10,7 @@ function Contact() {
     const [message, setMessage] = useState('');
     const [type, setType] = useState('job-offer');
 
-    const [t, i18n] = useTranslation('common');
+    const [t] = useTranslation('common');
     
     const sendMessage = (e) => {
         e.preventDefault();
